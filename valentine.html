@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be My Valentine? ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            background-color: #218838;
+        }
+
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: relative;
+        }
+
+        #message {
+            font-size: 28px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .heart {
+            font-size: 60px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+    <h1>Will You Be My Valentine?</h1>
+    <p>You make my world brighter every day 💕</p>
+
+    <button id="yesBtn" onclick="showMessage()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😢</button>
+
+    <div id="message">
+        Yayyy!! 🥰 I’m the luckiest person ever! 💍💖
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").style.display = "block";
+    }
+
+    function moveButton() {
+        var noBtn = document.getElementById("noBtn");
+        var x = Math.floor(Math.random() * 300) - 150;
+        var y = Math.floor(Math.random() * 200) - 100;
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+</script>
+
+
+
